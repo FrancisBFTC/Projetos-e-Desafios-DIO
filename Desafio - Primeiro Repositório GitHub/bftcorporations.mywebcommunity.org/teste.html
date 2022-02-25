@@ -1,0 +1,27 @@
+<html>
+        <head>
+                <title>GeoLocation</title>
+                <meta charset="utf-8">
+        </head>
+        <body>
+                
+                
+                <p>Botão de localização: </p> <button onclick="getLocation()">Localizar</button>
+                
+                <script>
+                    
+                   
+                   
+                    
+                    function getLocation(){
+                       
+                                    navigator.geolocation.getCurrentPosition(showPosition);
+                           
+                    }
+                    
+                    function showPosition(position){
+                           document.write(position.coords.latitude + "," + position.coords.longitude);
+                    }
+                </script>
+        </body>
+</html>

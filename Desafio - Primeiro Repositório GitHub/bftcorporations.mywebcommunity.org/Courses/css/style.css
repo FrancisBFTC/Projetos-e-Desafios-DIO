@@ -1,0 +1,59 @@
+body{
+	font-family: Arial, sans-serif;
+	background-image: url("../imgs/bftcorporations.png");
+	background-position: center left;
+	background-attachment: fixed;
+	background-size: 1400px 1000px;
+	color: rgba(0,0,0,1);
+}
+
+div#login{
+	width: 300px;
+	background-color: #00ff00;
+	text-align: center;
+	margin: 250px auto auto auto;
+	box-shadow: -8px -8px 20px #40ff00;
+}
+
+div#header-logo{
+	width: auto;
+	background-color: #00ff00;
+	color: #ffffff;
+	text-align: left;
+	margin: auto auto auto auto;
+	box-shadow: 8px 8px 20px #40ff00;
+}
+
+input.texts{
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size: 10pt;
+	background-color: rgba(255,255,255, .1);
+	
+}
+
+input.texts:hover{
+	background-color: #60ff00;
+}
+
+input.buttons:hover{
+	background-color: #00bbff;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+legend, label {
+	color: #777777;
+	font-weight: bold;
+	font-size: 13pt;
+	font-family: sans-serif;
+}
+
+div#list-modules ul li{
+	color: #ffffff;
+	margin-top: 25px;
+}
+
+div#list-modules{
+	margin-top: 65px;
+}

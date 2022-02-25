@@ -1,0 +1,15 @@
+div.mod{
+	margin-top: 50px;
+	display: inline-block;
+}
+
+video.vid{
+	display: block;
+	border-top: 20px;
+	border-bottom: 2px #ffffff solid;
+	border-top: 2px #ffffff solid;
+	border-left: 2px #ffffff solid;
+	border-right: 2px #ffffff solid;
+	margin-right: 50px;
+	width: 300px;
+}
