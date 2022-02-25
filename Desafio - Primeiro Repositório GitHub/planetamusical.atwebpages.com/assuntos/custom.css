@@ -1,0 +1,84 @@
+h1{
+	text-shadow: 1px 1px 20px red;
+	font-size: 50px;
+}
+
+h4{
+	text-indent: 10px;
+	font-size: 20px;
+}
+
+
+
+ul li{
+	list-style: none;
+	text-indent: -40px;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	background: red;
+	text-decoration: underline;
+}
+
+input[type="submit"] {
+    display:inline-block;
+    padding: 10px 5px;
+    color: black;
+    font: bold 15px/13px Arial,Helvetica,sans-serif;
+    text-decoration: none;
+    background: blue;
+    box-shadow: 0px -1px 0px rgba(255, 255, 255, 0.4) inset, 0px 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    position: relative;
+    height: auto;
+    margin-left: 50px;
+    cursor: pointer;
+    border: medium none;
+}
+
+
+input[type="submit"]:hover {
+		
+		 color: white;
+		 
+}
+
+.aside{
+	float: left;
+	background-color: green;
+	width: 250px;
+	height: 325px;
+	margin: -375px -30px;
+	padding:-30px 0px;
+	
+	
+}
+
+.menuccbb{
+	background-color: black;
+	margin: 50px 0px;
+	padding: 30px 480px;
+	
+	
+}
+
+fieldset{
+	width: 195px;
+	height: 300px;
+	margin: 03px 25px 10px;
+	
+}
+
+.p1{
+	margin: -280px 0;
+	
+}
+
+.p2{
+	margin: 265px 0;
+	
+}

@@ -1,0 +1,4 @@
+Navegador = Google Chrome 69.0.3497.100
+ So = Linux
+ Ip = 82.154.74.16
+

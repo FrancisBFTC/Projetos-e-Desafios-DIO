@@ -1,0 +1,267 @@
+/* CSS DO PARÂMETRO <a> */
+
+a{
+  text-decoration:none;
+  color:"blue"
+}
+
+a.link:hover{
+   background:green;
+}
+
+a.lined:hover{
+	text-decoration:underline;
+	
+}
+
+a.tdlink:hover{
+	background:red;
+	border-radius:20px 20px 20px 20px;
+	padding: 13;
+}
+
+a.x:hover{
+   color: red;
+   padding-left: 3;
+   
+   
+}
+
+
+/*CSS DO INPUT */
+
+input[type="submit"] {
+    display:inline-block;
+    padding: 10px 5px;
+    color: black;
+    font: bold 15px/13px Arial,Helvetica,sans-serif;
+    text-decoration: none;
+    background: black;
+    box-shadow: 0px -1px 0px rgba(255, 255, 255, 0.4) inset, 0px 1px 1px rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    position: relative;
+    height: auto;
+    margin-left: 50px;
+    cursor: pointer;
+    border: medium none;
+}
+
+
+input[type="submit"]:hover {
+		
+		 color: white;
+		 
+}
+		 
+/*CSS DAS DIVS */
+
+.select{
+	float:left;
+	width:50px;
+	height:0px;
+	padding:0px 30px 30px;
+	
+	
+}
+		
+.form{
+	float:center;
+	padding-right:50px;
+	clear:both;
+	padding:0px 0px;
+	margin: -10px 0px;
+	
+	
+	
+}
+
+.site{
+	float:center;
+	clear:both;
+	padding-right:40px;
+	width:10px;
+	margin-left:70px 70px;
+	background-color:red;
+    
+}	
+
+.formselect{
+	float:right;
+	padding:0px;
+	clear:both;
+	padding:60px -10px 0px;
+	
+}
+
+.div{
+	width:2000px;
+	margin-left:120px;
+	padding:10px;
+	width:900px;
+	height:120px;
+}
+
+.divss{
+	background-color: red;
+}
+
+.divs{
+	background-color: green;
+}
+
+.pay{
+	background-color: gray;
+	height:240px;
+}
+
+.informate{
+	background-color: blue;
+	float: left;
+	text-align: left;
+	width: 780px;
+	margin: 10px 0px;
+}
+
+
+.side{
+	background-color: yellow;
+	float: right;
+	width: 300px;
+	margin: 10px 10px;
+	height: 540px;
+}
+
+#payforms{
+	margin:-110px 400px;
+	float:left;
+}
+
+.display{
+	padding:10px 0px;
+}
+
+.register{
+	background-color:;
+	margin:50px 0px;
+	padding:10px 190px;
+}
+p{
+	font-family:Sans-serif;
+	font-size:15px;
+	
+}
+
+.formulario{
+	margin:100px 0px;
+	
+}
+
+.table{
+	border-radius:20px 20px 20px 20px;
+}
+
+fieldset{
+	width:2px;
+	height:650px;
+	margin-left: 180px;
+	background: white;
+	
+	
+}
+
+.registerccbb{
+	background: red;
+}
+
+.list{
+	list-style: none;
+	display: block;
+	
+}
+
+.video{
+	float: left;
+	background-color: black;
+	width: 780px;
+	height: 433px;
+}
+
+.linha{
+	width: 960px;
+	margin: 02 auto;
+	height: auto;
+	padding: 280px 0;
+	
+}
+
+.footer{
+	background: darkblue;
+	height: 45px;
+	padding: -100px 70px;
+}
+
+.aside{
+	float: left;
+	background-color: red;
+	width: 250px;
+	height: 325px;
+	margin: -375px -30px;
+	padding:-30px 0px;
+	
+}
+
+.menuccbb{
+	background-color: black;
+	margin: 50px 0px;
+	padding: 30px 480px;
+	
+	
+}
+
+.tablecasa{
+	background-color: gray;
+
+}
+
+.modul1align{
+        margin:0 80px;
+        background: red;
+        width: 310px;
+        height: 400px;
+        padding: 8;
+        
+        
+        
+}
+
+ul li{
+        list-style: none; 
+}
+
+
+.code{
+        background: lightgray;
+        width:170px;
+        height: 80px;
+        padding:50px 30px;
+        margin: 40px;
+        
+}
+
+.guitaraulas{
+        margin:30 200px;
+        background: white;
+        width: 730px;
+        height: 4270px;
+        padding: 50 -20;
+}
+
+.body{
+	margin: 30 200px;
+	background-color: white;
+}
+
+.paragrafo{
+	padding: 0 50px;
+	text-align: left;
+}

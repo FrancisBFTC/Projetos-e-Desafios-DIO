@@ -1,0 +1,96 @@
+/*css do tema input */
+
+input[type=submit]{
+	width: 62px;
+	height: auto;
+	cursor: pointer;
+	background: #2F2FFF;
+	color: black;
+	box-shadow:1px 1px 5px black;
+	font-size: 16px;
+
+}
+
+input[type=submit]:hover{
+	color: white;
+	background: green;
+}
+
+#form{
+	background: lightgray;
+	height: 300px;
+	width: 220px;
+	margin: 190px 420px;
+	padding: 30px;
+
+}
+
+.field{
+	margin: 30px 0;
+	width: 230px;
+	
+}
+
+input[type="submit"].subtração {
+	width: 62px;
+	height: auto;
+	cursor: pointer;
+	background: red;
+	color: black;
+	box-shadow:1px 1px 5px black;
+	font-size: 16px;
+
+}
+
+input[type="submit"].subtração:hover{
+	color: white;
+	background: blue;
+}
+
+input[type="submit"].multiplicação {
+	width: 80px;
+	height: auto;
+	cursor: pointer;
+	background: green;
+	color: black;
+	box-shadow:1px 1px 5px black;
+	font-size: 16px;
+
+}
+
+input[type="submit"].multiplicação:hover{
+	color: white;
+	background: red;
+}
+
+input[type="submit"].divisão {
+	width: 62px;
+	height: auto;
+	cursor: pointer;
+	background: gray;
+	color: black;
+	box-shadow:1px 1px 5px black;
+	font-size: 16px;
+
+}
+
+input[type="submit"].divisão:hover{
+	color: white;
+	background: orange;
+}
+
+a{
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+.calcul{
+	background: lightgray;
+	height: 350px;
+	width: 220px;
+	margin: 190px 420px;
+	padding: 30px;
+}
