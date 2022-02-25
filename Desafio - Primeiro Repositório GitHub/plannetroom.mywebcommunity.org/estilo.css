@@ -1,0 +1,71 @@
+.input{
+	background: blue;
+	color: white;
+	border-radius: 20px;
+	font-size: 20px;
+        border:solid 1px lightblue;
+        width:180px;
+        height:40px;
+	
+}
+
+.input:hover{
+	background: white;
+	color: blue;
+	cursor: pointer;
+	
+}
+
+.inputlogin{
+	background: blue;
+	color: white;
+	border-radius: 20px;
+        border:solid 1px lightblue;
+        font-size: 16px;
+        width:120px;
+        
+	
+}
+
+.inputlogin:hover{
+	background: white;
+	color: blue;
+	cursor: pointer;
+	
+}
+
+.div_top{
+     
+        height: 250px;
+        width:900px;
+        margin-top:60px;
+        padding: -20px;
+        border:solid 1px lightblue;
+        border-radius:10px 10px 0px 0px;
+        box-shadow:10px 10px 10px 5px black;
+}
+
+.tablecasa{
+	padding: -10px;
+	height: 150px;
+        width:900px;
+        border-radius: 0px 0px 10px 10px;
+        box-shadow:10px 10px 10px 5px black;
+}
+
+
+.table{
+	border-radius:20px 20px 20px 20px;
+
+}
+
+a.tdlink:hover{
+	background:blue;
+	border-radius:20px 20px 20px 20px;
+	padding: 13;
+
+}
+
+a{
+	text-decoration: none;
+}

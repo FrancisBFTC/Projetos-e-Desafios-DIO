@@ -1,0 +1,11 @@
+
+<?php
+if(file_exists("usuarios/Matheus Henrique.txt")){
+echo "<br> <a href=suaconta.php?id=Matheus Henrique>Matheus Henrique</a>";
+}
+?>
+<?php
+if(file_exists("usuarios/monaco.txt")){
+echo "<br> <a href=suaconta.php?id=monaco>monaco</a>";
+}
+?>

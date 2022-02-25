@@ -1,0 +1,9 @@
+
+<?php
+$senha="1324354657687980";
+$nome="wenderson francisco gonçalves dos anjos";
+$cpf="058.790.261-24";
+$data="14/08/1996";
+$fone="(61) 99624-8911";
+$cad="13/12/2016";
+?>
