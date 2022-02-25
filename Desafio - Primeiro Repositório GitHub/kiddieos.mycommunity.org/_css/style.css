@@ -257,3 +257,33 @@
   footer#rodape p {
     text-align: center;
   }
+
+  .post_title{
+  font-size: 16px;
+  font-style: italic;
+  margin: 0;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.post{
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 5px solid darkblue;
+  border-radius: 5%;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+.imgkid{
+  width: 30%;
+  height: 30%;
+  margin-bottom: 15px;
+}
+
+.post_content{
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: justify;
+}
