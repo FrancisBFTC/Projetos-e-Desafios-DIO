@@ -76,12 +76,12 @@
   </script>
 
 	<style type="text/css">
-		div{
+		#accordion{
 			width: 50%;
 		}
 
 		.toggler{
-			width: 500px;
+			width: 100%;
 			height: 200px;
 			position: relative;
 		}
@@ -106,7 +106,7 @@
 <body>
 	<div id="accordion">
 		<h3> Seção 1</h3>
-		<div>
+		<div class="divsection">
 			<p>
 				Primeira seção de teste...
 				<button class="button1" class="ui-state-default ui-corner-all">Toggle Effect</button>
