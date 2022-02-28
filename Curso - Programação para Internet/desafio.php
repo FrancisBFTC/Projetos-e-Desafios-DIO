@@ -1,4 +1,13 @@
 <!DOCTYPE html>
+
+<!-- Tutoriais nos sites: 
+https://jqueryui.com/animate/
+https://jqueryui.com/accordion/
+
+Tutoriais BootStrap:
+https://www.w3schools.com/
+-->
+
 <html>
 <head>
 	<meta charset="utf-8">
