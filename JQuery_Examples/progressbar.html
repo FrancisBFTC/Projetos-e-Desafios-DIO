@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery ProgressBar</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="/resources/demos/style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		
+		$(function(){
+			$("#progressbar").progressbar({
+				value: 80,
+				max: 1000
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Exemplos de ProgressBar</h1>
+	</header>
+	<section>
+		<article>
+			<div id="progressbar"></div>
+
+			<script type="text/javascript">
+				$(function(){
+					for (var i = 0; i < 1000; i++) {
+						$( "#progressbar" ).progressbar( "option", "value", i );
+						for (var j = 0; j < 1000000; j++){
+							//processing any thing
+						}
+					}
+				});
+			</script>
+
+		</article>
+	</section>
+</body>
+</html>
