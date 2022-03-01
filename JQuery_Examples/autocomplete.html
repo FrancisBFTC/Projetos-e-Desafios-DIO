@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery AutoComplete</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="/resources/demos/style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			
+			var TagsDisponiveis = [
+				"Assembly",
+				"ActionScript",
+				"AppleScript",
+				"Asp",
+				"BASIC",
+				"C",
+				"C++",
+				"Clojure",
+				"COBOL",
+				"ColdFusion",
+				"Erlang",
+				"Fortran",
+				"Groovy",
+				"Haskell",
+				"Java",
+				"JavaScript",
+				"Lisp",
+				"Perl",
+				"PHP",
+				"Python",
+				"Ruby",
+				"Scala",
+				"Scheme"
+			];
+
+			$("#tags").autocomplete({
+				source: TagsDisponiveis
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Exemplos de Autocomplete</h1>
+	</header>
+	<section>
+		<article>
+			
+			<div class="ui-widget">
+				<label for="tags">Tags: </label>
+				<input id="tags">
+			</div>
+
+		</article>
+	</section>
+</body>
+</html>

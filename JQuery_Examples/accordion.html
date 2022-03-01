@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<!-- 
+Temas de ícones para Headers Accordion:
+https://api.jqueryui.com/theming/icons/
+-->
+
+<html>
+<head>
+	<title>JQuery Accordion</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="/resources/demos/style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+	<script type="text/javascript">
+		$(function(){
+			$("#accordion").accordion({
+				animate: 50,
+				active: 2,
+				classes: {
+					"ui-accordion": "custom-red"
+				},
+				collapsible: true,
+				disabled: false,
+				event: "mouseover",
+				header: "h3",
+				icons: { 
+					"header": "ui-icon-plus", 
+					"activeHeader": "ui-icon-minus"
+					//"header": "ui-icon-caret-1-e",
+					//activeHeader": "ui-icon-caret-1-s"
+				}
+			});
+
+			//getters
+			var animate = $("#accordion").accordion("option", "animate");
+			var active = $("#accordion").accordion("option", "active");
+			var theme = $("#accordion").accordion("option", "classes.ui-accordion");
+			var collapsible = $( "#accordion" ).accordion( "option", "collapsible" );
+
+			//setters (Outras Alternativas dinâmicas)
+			$("#accordion").accordion("option", "classes.ui-accordion", "custom-red");
+			$( "#accordion" ).accordion( "option", "disabled", false );
+			$( "#accordion" ).accordion( "option", "collapsible", true );
+			$( "#accordion" ).accordion( "option", "event", "mouseover" );
+		});
+
+
+	</script>
+
+	<style type="text/css">
+		#accordion{
+			width: 50%; 
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Exemplos de Accordion JQuery</h1>
+	</header>
+	<section>
+		<article>
+			<div id="accordion">
+				<h3>Primeiro Header</h3>
+				<div>Primeiro painel de conteúdo</div>
+				<h3>Segundo Header</h3>
+				<div>Segundo painel de conteúdo</div>
+				<h3>Terceiro Header</h3>
+				<div>
+					Terceiro painel de conteúdo:
+					<ol>
+						<li>Primeiro Item</li>
+						<li>Segundo Item</li>
+						<li>Terceiro Item</li>
+					</ol>
+				</div>
+			</div>
+		</article>
+	</section>
+	
+</body>
+</html>
