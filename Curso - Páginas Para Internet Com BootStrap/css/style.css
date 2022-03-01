@@ -1,0 +1,45 @@
+.navbar {
+	background-color: #00FF00;
+}
+
+.quemsomos{
+	background-color: #58FA58;
+	color: blue;
+}
+
+.gallery{
+	background-color: #FE9A2E;
+}
+
+.margin{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.section-quem-somos{
+	margin-left: 10%;
+	margin-right: 10%;
+	background-color: white;
+	border: 2px solid darkblue;
+	border-radius: 5%;
+}
+
+h2{
+	padding-bottom: 40px;
+	color: darkblue;
+}
+
+.img-default{
+	width: 50%;
+	height: 50%;
+}
+
+.img-logo{
+	width: 10%;
+	height: 10%;
+}
+
+.img-gallery{
+	width: 100%;
+	height: 180px;
+}
