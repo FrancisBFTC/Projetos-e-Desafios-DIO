@@ -1,0 +1,3 @@
+git add .
+git commit -m "Fazendo novos testes JS"
+git push origin main
