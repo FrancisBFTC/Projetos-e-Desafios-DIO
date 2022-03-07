@@ -59,4 +59,7 @@ function createSecondPhrase(num1, num2){
 	return 'Sua soma é ${sum}, que é ${result10} que 10 e ${result20} que 20.';
 }
 
-console.log(compareNumbers(1, 2));
+//console.log(compareNumbers(1, 2));
+ CheckNumbers(1, 5);
+
+ 
