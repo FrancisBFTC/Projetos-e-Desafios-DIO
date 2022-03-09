@@ -168,15 +168,16 @@ while(a < vencedores.length){
 }
 
 console.log('\nResultado Final do jogo =>\n');
-console.log('O melhor jogador e vencedor das', jogo.partidas, 'partidas foi:');
+console.log(`O melhor jogador e vencedor das ${jogo.partidas} partidas foi:`);
+
 
 if(x == y){
-	console.log('Os dois! Porque venceram empatados com', jogo.pontuacao, 'pontos!');
+	console.log(`Os dois! Porque venceram empatados com ${jogo.pontuacao} pontos!`);
 }else{
 	if(x > y)
-		console.log(nomes_jogadores[0], 'com', jogo.pontuacao, 'pontos!');
+		console.log(`${nomes_jogadores[0]} com ${jogo.pontuacao} pontos!`);
 	else
-		console.log(nomes_jogadores[1], 'com', jogo.pontuacao, 'pontos!');	
+		console.log(`${nomes_jogadores[1]} com ${jogo.pontuacao} pontos!`);	
 }
 
 
