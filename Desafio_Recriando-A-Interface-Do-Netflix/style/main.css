@@ -13,7 +13,7 @@
 /* Elementos base */
 body{
     background: var(--preta);
-    font-family:'Times New Roman', Times, serif;
+    font-family:'Arial', Times, serif;
     color: white;
 }
 
@@ -98,7 +98,11 @@ header nav a:hover{
     display: block;
 }
 
-.carrosel-file h2{
+.carrosel-filmes h2{
     margin: 20px;
     position: relative;
+}
+
+.carrosel-filmes{
+    margin-top: 5px;
 }
