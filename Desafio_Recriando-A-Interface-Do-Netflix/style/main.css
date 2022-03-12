@@ -1,5 +1,6 @@
 :root{
     --vermelho: #E50914;
+    --verde: #068810;
     --preta: #141414;
 }
 
@@ -25,7 +26,7 @@ header .container{
 
 header .logo{
     margin-left: 5px;
-    color: var(--vermelho);
+    color: var(--verde);
     font-family: 'Arial Black';
     font-size: 40px;
 }
@@ -43,7 +44,7 @@ header nav a:hover{
 /* Filme principal */
 .filme-principal{
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/silicon-valley-capa.jpg');
+    background: linear-gradient(rgba(0,0,0,.100),rgba(20,20,20,.90)100%), url('../img/Silicon-Valley/silicon-valley-capa.jpg');
     background-size: cover;
     height: 500px;
     display: flex;
@@ -81,4 +82,23 @@ header nav a:hover{
 
 .botao i{
     margin-right: 5px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 50%;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.carrosel-file h2{
+    margin: 20px;
+    position: relative;
 }
