@@ -20,16 +20,16 @@
 		<div class="container">
 			<h2 class="logo">TECFLIX</h2>
 			<nav>
-				<a href="#inicio">Inicio</a>
-				<a href="#series">Séries</a>
-				<a href="#filmes">Filmes</a>
-				<a href="#documentarios">Documentários</a>
+				<a href="#inicio-menu" id="begin" class="inicio-menu" onclick="setColorSelected('begin')">Inicio</a>
+				<a href="#series-menu" id="series" class="series-menu" onclick="setColorSelected('series')">Séries</a>
+				<a href="#filmes-menu" id="movies" class="filmes-menu" onclick="setColorSelected('movies')">Filmes</a>
+				<a href="#documentarios-menu" id="documentaries" class="documentarios-menu" onclick="setColorSelected('documentaries')">Documentários</a>
 			</nav>
 		</div>
 	</header>
 
 	<!-- Imagem de fundo do filme, título e sinopse -->
-	<main id="inicio">
+	<main id="inicio-menu">
 		<div class="filme-principal">
 			<div class="container">
 				<h3 class="titulo-filme">Silicon Valley</h3>
@@ -48,7 +48,7 @@
 		</div>
 	</main>
 
-	<section id="filmes">
+	<section id="filmes-menu">
 		<div class="carrosel-filmes">
 			<h2>Filmes de Tecnologia e Ficção Científica</h2>
 			<div class="owl-carousel owl-theme">
@@ -141,7 +141,7 @@
 
 	<br>
 
-	<section id="series">
+	<section id="series-menu">
 		<div class="carrosel-filmes">
 			<h2>Series de tecnologia e ficção científica</h2>
 			<div class="owl-carousel owl-theme">
@@ -157,7 +157,7 @@
 
 	<br>
 
-	<section id="documentarios">
+	<section id="documentarios-menu">
 		<div class="carrosel-filmes">
 			<h2>Filmes/Documentários de Steve Jobs</h2>
 			<div class="owl-carousel owl-theme">

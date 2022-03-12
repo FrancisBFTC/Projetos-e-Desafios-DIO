@@ -14,3 +14,17 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
+var itemSelectedBefore = 'begin';
+
+function setColorSelected(theClass){
+    let itemBefore = document.getElementById(itemSelectedBefore);
+    itemBefore.style.color = '#AAA';
+    let menuItem = document.getElementById(theClass);
+    menuItem.style.color = '#37e737';
+    itemSelectedBefore = theClass;
+}
+
+
+
+

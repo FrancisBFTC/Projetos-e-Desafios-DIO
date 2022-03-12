@@ -35,11 +35,16 @@ header nav a{
     text-decoration: none;
     color: #AAA;
     margin-right: 10px;
+    box-shadow: 0 2px 2px rgba(0,255,0,0.2);
+    transition: transform 0.8s ease-in-out;
 }
 
 header nav a:hover{
-    color: #FFF;
+    color: #37e737;
+    transform: scale(1.5); 
+    box-shadow: 0 5px 15px rgba(0,255,0,0.3);
 }
+
 
 /* Filme principal */
 .filme-principal{
@@ -105,4 +110,8 @@ header nav a:hover{
 
 .carrosel-filmes{
     margin-top: 5px;
+}
+
+.efeitoHover{
+    color: red;
 }
