@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap');
+
+body.light-mode{
+	background-color: #e5e8e8;
+	color: #4e545c;
+	margin: 0;
+	font-family: 'Quicksand';
+}
+
+body.dark-mode {
+	background-color: #000401;
+	color: #e5e8e8;
+}
+
+body.vim-dark-blue {
+	background-color: #1d06a3;
+	color: #e5e8e8;
+}
+
+main {
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+footer.light-mode{
+	width: 100%;
+	background-color: #4e545c;
+	padding: 16px;
+	color: #e5e8e8;
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	font-weight: 400;
+}
+
+footer.dark-mode {
+	background-color: #8d8d97;
+	color: #000401;
+}
+
+footer.vim-dark-blue {
+	background-color: #706edf;
+	color: #000401;
+}
+
+button.light-mode{
+	border-radius: 40px;
+	font-size: 1.5rem;
+	height: 60px;
+	width: 200px;
+	border: none;
+	background-color: #4e545c;
+	color: #e5e8e8;
+	transition: all 0.5s linear;
+}
+
+button.light-mode:hover {
+	background-color: #000401;
+	cursor: pointer;
+}
+
+button.dark-mode {
+	background-color: #e5e8e8;
+	color: #4e545c;
+}
+
+button.dark-mode:hover {
+	background-color: #4e545c;
+	color: #e5e8e8;
+	cursor:grab;
+}
+
+button.vim-dark-blue {
+	background-color: #2e7c76;
+	color: #00224e;
+}
+
+button.vim-dark-blue:hover {
+	background-color: #078399;
+	color: #e5e8e8;
+	cursor:move;
+}
