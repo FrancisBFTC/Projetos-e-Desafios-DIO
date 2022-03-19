@@ -1,3 +1,5 @@
+--- Aulas de MySql - Trabalhando com Tabelas
+
 CREATE TABLE pessoa (
 	id INT NOT NULL PRIMARY KEY AUTOINCREMENT,
 	nome VARCHAR(30) NOT NULL,
