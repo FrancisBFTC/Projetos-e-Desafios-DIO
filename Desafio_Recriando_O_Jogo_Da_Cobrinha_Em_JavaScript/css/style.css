@@ -1,0 +1,82 @@
+body{
+	height: 95vh;
+    width: 95vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: green;
+	background-image: url(../img/background-snake1.jpg);
+	background-size: cover;
+	background-position: 10px;
+}
+
+h1 {
+	color: green;
+	box-shadow: 3px 3px 3px 1px rgba(0, 255, 0, 0.2);
+	text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.game-over{
+	display: flex;
+	flex-direction: column;
+	background-color: red;
+	color: white;
+	font-size: 40px;
+	border: 1px solid white;
+	padding: 5px;
+	border-radius: 10%;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+.panel-menu{
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	width: 512px;
+	height: 512px;
+	background-color: green;
+}
+
+#play-again{
+	display: flex;
+	flex-direction: column;
+	background-color: blue;
+	color: green;
+	font-size: 40px;
+	border: 2px solid black;
+	padding: 5px;
+	border-radius: 10%;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;
+}
+
+#play-again:hover{
+	transition: .3s ease all;
+	background-color: green;
+	color: white;
+	cursor: pointer;
+}
+
+#level-div{
+	display: flex;
+	width: 512px;
+	background-color: black;
+	border: 1px solid green;
+	height: 500px;
+	justify-content: right;
+	align-items: center;
+}
+
+.input-class{
+	background-color: black;
+	border: none;
+	color: green;
+	font-weight: bold;
+	width: 50px;
+	height: 15px;
+}
