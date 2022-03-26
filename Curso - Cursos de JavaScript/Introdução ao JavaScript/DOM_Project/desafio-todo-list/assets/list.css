@@ -27,14 +27,14 @@ h2{
    }
 
 * {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Arial', sans-serif;
     color: white;
 }
 
 body {
-    background: url('img/task-img2.jpg');
-    background-repeat: no-repeat;
-    background-size: 100%;
+    background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('img/task-img2.jpg');
+    background-size: cover;
+
 }
 
 button {
