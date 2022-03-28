@@ -2,18 +2,25 @@ var player, winner = null;
 var selectedPlayer = document.getElementById("jogador-selecionado");
 var selectedWinner = document.getElementById("vencedor-selecionado");
 var squares = document.getElementsByClassName("quadrado");
+var counter = 0;
 
 exchangePlayer("X");
 
 function chooseSquare(id){
     
+    if(counter === 9)
+        alert("O jogo deu velha! :( Reinicie a jogada!");
+
     if(winner !== null) return;
 
     let square = document.getElementById(id);
     if(square.innerHTML !== '-') return;
 
+    counter++;
+
     square.innerHTML = player;
     square.style.color = "#000";
+
 
     player = (player === "X") ? "O" : "X";
     exchangePlayer(player);
@@ -28,6 +35,7 @@ function exchangePlayer(value){
 function exchangeWinner(winner_square){
     winner = winner_square.innerHTML;
     selectedWinner.innerHTML = winner;
+    counter = 0;
 }
 
 function checkWinner(){
@@ -86,7 +94,11 @@ function checkWinner(){
     if(checkSequencie(square3, square5, square7)){
         changeColorSquare(square3, square5, square7);
         exchangeWinner(square3);
+        return;
     }
+
+    if(counter === 9)
+        alert("O jogo deu velha! :( Reinicie a jogada!");
 }
 
 let checkSequencie = (sq1, sq2, sq3) => {
@@ -106,6 +118,7 @@ let changeColorSquare = (sq1, sq2, sq3) => {
 function reinitialize(){
     winner = null;
     selectedWinner.innerHTML = "";
+    counter = 0;
 
     for(let i = 1; i <= 9; i++){
         let square = document.getElementById(i);
