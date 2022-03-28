@@ -8,7 +8,7 @@ exchangePlayer("X");
 function chooseSquare(id){
     
     if(winner !== null) return;
-    
+
     let square = document.getElementById(id);
     if(square.innerHTML !== '-') return;
 
@@ -101,4 +101,18 @@ let changeColorSquare = (sq1, sq2, sq3) => {
     sq1.style.background = "#00FF00";
     sq2.style.background = "#00FF00";
     sq3.style.background = "#00FF00";
+}
+
+function reinitialize(){
+    winner = null;
+    selectedWinner.innerHTML = "";
+
+    for(let i = 1; i <= 9; i++){
+        let square = document.getElementById(i);
+        square.style.background = "#eee";
+        square.style.color = "#eee";
+        square.innerHTML = "-";
+    }
+
+    exchangePlayer("X");
 }
