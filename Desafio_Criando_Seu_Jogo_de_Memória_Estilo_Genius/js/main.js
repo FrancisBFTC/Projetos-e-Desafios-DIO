@@ -46,7 +46,7 @@ let checkOrder = () => {
 	}
 
 	if(clickedOrder.length == order.length){
-		alert(`Seus pontos são ${score}\n Você acertou! Iniciando próximo nível`);
+		alert(`Seus pontos são ${score}\nVocê acertou! Iniciando próximo nível`);
 		nextLevel();
 	}
 }
@@ -58,7 +58,45 @@ let click = (color) => {
 
 	setTimeOut(() => {
 		createColorElement(color).classList.remove('selected');
-	});
-
-	checkOrder();
+		checkOrder();
+	}, 250);
 }
+
+// Função que retorna a cor
+let createColorElement = (color) => {
+	switch(color){
+		case 0: return GREEN_DIV;
+		case 1: return RED_DIV;
+		case 2: return YELLOW_DIV;
+		case 3: return BLUE_DIV;
+	}
+}
+
+// Função que vai para o próximo nível
+let nextLevel = () => {
+	score++;
+	shuffleOrder();
+}
+
+// Função para final de jogo caso perdeu
+let gameover = () => {
+	alert(`Seus pontos são ${score}\nVocê perdeu! :(\n Reinicie o jogo em Ok`);
+	order = [];
+	clickedOrder = [];
+
+	playGame();
+}
+
+let playGame = () => {
+	alert("Bem-vindo ao Gênius! Iniciando jogo");
+	score = 0;
+
+	nextLevel();
+}
+
+GREEN_DIV.addEventListener('click', click(0));
+RED_DIV.addEventListener('click', click(1));
+YELLOW_DIV.addEventListener('click', click(2));
+BLUE_DIV.addEventListener('click', click(3));
+
+playGame();
