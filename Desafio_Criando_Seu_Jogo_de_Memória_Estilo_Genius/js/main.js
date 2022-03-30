@@ -12,7 +12,7 @@ var music_back = 0;
 
 // Lista de músicas disponíveis no diretório
 var arrayPlayer = [
- 	'music-back',
+ 	'Christina.Aguilera-feel.this.moment',
 	'psyborgcorp-mymechatronics',
 	'rammstein-ich.tuh.dir.weh'
 ];
