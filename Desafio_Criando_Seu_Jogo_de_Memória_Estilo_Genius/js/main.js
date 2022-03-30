@@ -3,15 +3,32 @@ let clickedOrder = [];
 let score = 0;
 let isTiming = false;
 
-// 0 - verde
-// 1 - vermelho
-// 2 - amarelo
-// 3 - azul
+// Novas variáveis globais: contadores para player
+// e sequência de cores
+var number = 0;
+var counter = 0;
+var countPlayer = 0;
+var music_back = 0;
 
+// Lista de músicas disponíveis no diretório
+var arrayPlayer = [
+ 	'music-back',
+	'psyborgcorp-mymechatronics',
+	'rammstein-ich.tuh.dir.weh'
+];
+
+// Array para eventos dos players
+var musicPlayer = [];
+
+// Constantes dos elementos HTML
 const BLUE_DIV   = document.querySelector('.blue');
 const RED_DIV    = document.querySelector('.red');
 const GREEN_DIV  = document.querySelector('.green');
 const YELLOW_DIV = document.querySelector('.yellow');
+
+// Constante do H3 para nome da música
+const nameMusic = document.getElementById('name-music');
+
 
 // Esta função cria ordem aleatória de cores
 let shuffleOrder = () => {
@@ -21,44 +38,31 @@ let shuffleOrder = () => {
 
 	for(let i in order){
 		let elementOrder = createColorElement(order[i]);
-		lightColor(elementOrder, Number(i) + 1);
+		let classElement = getClassElement(order[i]);
+		lightColor(elementOrder, classElement);
 	}
+
 }
 
 // Torna mais clara a próxima cor
-let lightColor = (element, number) => {
-	//number = number * 500;
+let lightColor = (element, classElement) => {
+	number = number + 250;
+
+	// Aqui teve um bug e foi corrigido, cada cor deve piscar por vez!
+	setTimeout(() => {
+			element.classList.add(classElement);
+	}, number);
+
+	number = number + 250;
 
 	setTimeout(() => {
-		element.classList.add('selected');
-	}, 500);
-
-	setTimeout(() => {
-		element.classList.remove('selected');
-		isTiming = true;
-	}, 1000);
-	
-	/*
-	let i = 0;
-
-	const timer = setInterval(function() {
-		  if(i === 0)
-		  	element.classList.add('selected');
-
-		  if (i >= 5) {
-		  	element.classList.remove('selected');
-		  	isTiming = true;
-		    clearInterval(timer)
-		  }
-
-		  i++
-		  console.log(i)
-	}, 1000);
-
-	while(isTiming == false){
-
-	}
-	*/
+		element.classList.remove(classElement);
+		counter++;
+		if(counter === order.length){
+			counter = 0;
+			number = 0;
+		}
+	}, number);
 
 }
 
@@ -80,10 +84,10 @@ let checkOrder = () => {
 // Função para cliques dos usuários
 let click = (color) => {
 	clickedOrder[clickedOrder.length] = color;
-	createColorElement(color).classList.add('selected');
+	createColorElement(color).classList.add(getClassElement(color));
 
 	setTimeout(() => {
-		createColorElement(color).classList.remove('selected');
+		createColorElement(color).classList.remove(getClassElement(color));
 		checkOrder();
 	}, 250);
 }
@@ -95,6 +99,15 @@ let createColorElement = (color) => {
 		case 1: return RED_DIV;
 		case 2: return YELLOW_DIV;
 		case 3: return BLUE_DIV;
+	}
+}
+
+let getClassElement = (color) => {
+	switch(color){
+		case 0: return 'selected-green';
+		case 1: return 'selected-red';
+		case 2: return 'selected-yellow';
+		case 3: return 'selected-blue';
 	}
 }
 
@@ -115,10 +128,37 @@ let gameover = () => {
 
 // Função para iniciar o jogo
 let playGame = () => {
-	alert("Bem-vindo ao Gênius! Iniciando jogo");
+
+	// Inicia música específica no Array e exibe o nome
+	setInterval(() => {
+	 	musicPlayer[countPlayer].play();
+	 	nameMusic.innerHTML = arrayPlayer[countPlayer]
+	 				.replace('-', ' - ')
+	 				.replaceAll('.', ' ') + ' reproduzindo...';
+	}, 100);
+
+	alert("Let´s go The Genius! Vamos dançar e memorizar?");
 	score = 0;
 
 	nextLevel();
+}
+
+// Função para adicionar músicas na lista e evento de terminado
+// É tocado 3 músicas repetidamente
+let initMusics = () => {
+
+	for(let i = 0; i < arrayPlayer.length; i++){
+		musicPlayer.push(document.getElementById(arrayPlayer[i]));
+		
+		musicPlayer[i].addEventListener('ended', function(){
+	 		musicPlayer[i].currentTime = 0;
+	 		musicPlayer[i].pause();
+	 		countPlayer++;
+	 		
+	 		if(countPlayer === arrayPlayer.length) countPlayer = 0;
+	 	});
+	}
+
 }
 
 // Eventos dos botões para as cores
@@ -127,4 +167,7 @@ RED_DIV.onclick = () => click(1);
 YELLOW_DIV.onclick = () => click(2);
 BLUE_DIV.onclick = () => click(3);
 
+// Chama a função para adicionar músicas e iniciar jogo
+initMusics();
 playGame();
+

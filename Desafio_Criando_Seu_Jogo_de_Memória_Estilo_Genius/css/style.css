@@ -1,6 +1,15 @@
 body {
 	margin: 0;
 	background-color: rgb(200, 255, 235);
+	background: url('../assets/img/giphy.gif');
+	background-size: cover;
+}
+
+h1{
+	font-size: 50px;
+	color: #FFF;
+	text-shadow: 0.2em 0.2em 0.3em white;
+	text-align: center;
 }
 
 .main-game{
@@ -9,6 +18,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-top: -60px;
 }
 
 .genius{
@@ -19,19 +29,19 @@ body {
 	border: 1px solid #FFFFFF;
 	background-color: #FFFFFF;
 	border-radius: 100%;
-	width: 700px;
-	height: 700px;
+	width: 400px;
+	height: 400px;
 }
 
 .blue{
 	grid-area: g-blue;
-	background-color: blue;
+	background-color: darkblue;
 	border-bottom-right-radius: 100%;
 }
 
 .red{
 	grid-area: g-red;
-	background-color: red;
+	background-color: darkred;
 	border-top-right-radius: 100%;
 }
 
@@ -43,10 +53,28 @@ body {
 
 .green{
 	grid-area: g-green;
-	background-color: green;
+	background-color: darkgreen;
 	border-top-left-radius: 100%;
 }
 
-.selected{
-	opacity: 0.4;
+.selected-blue{
+	background-color: lightblue;
+}
+
+.selected-red{
+	background-color: red;
+}
+
+.selected-green{
+	background-color: lightgreen;
+}
+
+.selected-yellow{
+	opacity: 0.2;
+}
+
+.name-music{
+	color: #FFF;
+	text-align: center;
+	margin-top: -30px;
 }
