@@ -1,6 +1,7 @@
 let order = [];
 let clickedOrder = [];
 let score = 0;
+let isTiming = false;
 
 // 0 - verde
 // 1 - vermelho
@@ -14,7 +15,7 @@ const YELLOW_DIV = document.querySelector('.yellow');
 
 // Esta função cria ordem aleatória de cores
 let shuffleOrder = () => {
-	let colorOrder = Math.floor(Math.ramdom() * 4);
+	let colorOrder = Math.floor(Math.random() * 4);
 	order[order.length] = colorOrder;
 	clickedOrder = [];
 
@@ -26,14 +27,39 @@ let shuffleOrder = () => {
 
 // Torna mais clara a próxima cor
 let lightColor = (element, number) => {
-	number = number * 500;
-	setTimeOut(() => {
-		element.classList.add('selected');
-	}, number - 250);
+	//number = number * 500;
 
-	setTimeOut(() => {
+	setTimeout(() => {
+		element.classList.add('selected');
+	}, 500);
+
+	setTimeout(() => {
 		element.classList.remove('selected');
-	});
+		isTiming = true;
+	}, 1000);
+	
+	/*
+	let i = 0;
+
+	const timer = setInterval(function() {
+		  if(i === 0)
+		  	element.classList.add('selected');
+
+		  if (i >= 5) {
+		  	element.classList.remove('selected');
+		  	isTiming = true;
+		    clearInterval(timer)
+		  }
+
+		  i++
+		  console.log(i)
+	}, 1000);
+
+	while(isTiming == false){
+
+	}
+	*/
+
 }
 
 // Identifica se os botões clicados é a mesma ordem do jogo
@@ -56,7 +82,7 @@ let click = (color) => {
 	clickedOrder[clickedOrder.length] = color;
 	createColorElement(color).classList.add('selected');
 
-	setTimeOut(() => {
+	setTimeout(() => {
 		createColorElement(color).classList.remove('selected');
 		checkOrder();
 	}, 250);
@@ -87,6 +113,7 @@ let gameover = () => {
 	playGame();
 }
 
+// Função para iniciar o jogo
 let playGame = () => {
 	alert("Bem-vindo ao Gênius! Iniciando jogo");
 	score = 0;
@@ -94,9 +121,10 @@ let playGame = () => {
 	nextLevel();
 }
 
-GREEN_DIV.addEventListener('click', click(0));
-RED_DIV.addEventListener('click', click(1));
-YELLOW_DIV.addEventListener('click', click(2));
-BLUE_DIV.addEventListener('click', click(3));
+// Eventos dos botões para as cores
+GREEN_DIV.onclick = () => click(0);
+RED_DIV.onclick = () => click(1);
+YELLOW_DIV.onclick = () => click(2);
+BLUE_DIV.onclick = () => click(3);
 
 playGame();
