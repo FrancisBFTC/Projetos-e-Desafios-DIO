@@ -1,0 +1,62 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: #eeeeee;
+}
+
+/* Classe do dinossauro */
+.div-dino{
+	width: 60px;
+	height: 60px;
+	background-image: url(../../img/dino.png);
+	position: absolute;
+	bottom: 0;
+}
+
+/* Classe do Cactus */
+.div-cactus{
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	bottom: 0;
+	background-image: url(../../img/cactus.png);
+}
+
+/* Classe dos Pássaros */
+.div-bird{
+	position: absolute;
+	width: 44px;
+	height: 28px;
+	bottom: 50;
+	background-image: url(../../img/bird-wind-up.png);
+}
+
+.game-over{
+	text-align: center;
+	color: #666666;
+	margin-top: 50px;
+	font-family: Arial;
+}
+
+@keyframes slideright{
+	from {
+		background-position: 70000%;
+	}
+
+	to {
+		background-position: 0;
+	}
+}
+
+.div-background {
+	position: absolute;
+	bottom: 0;
+	background-image: url(../../img/background.png);
+	background-repeat: repeat-x;
+	animation: slideright 2000s infinite linear;
+	width: 100%;
+	height: 200px;
+}
