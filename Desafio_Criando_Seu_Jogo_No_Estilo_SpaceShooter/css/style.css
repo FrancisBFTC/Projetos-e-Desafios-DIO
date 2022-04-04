@@ -7,49 +7,101 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: sans-serif;
-	background-color: lightblue;
+	background: url(../img/background3.webp);
+	background-size: cover;
+}
+
+@keyframes slidedown {
+	from { background-position: 0 70000%; }
+	to   { background-position: 0 0; }
+}
+
+@keyframes slideup {
+	from { background-position: 0 0; }
+	to   { background-position: 0 70000%; }
+}
+
+@keyframes slideright {
+	from { background-position: 0; }
+	to   { background-position: 70000%; }
+}
+
+@keyframes slideleft {
+	from { background-position: 70000%; }
+	to   { background-position: 0; }
 }
 
 #main-play-area {
 	background-color: black;
-	background-image: url(../img/space.png);
-	height: 600px;
-	width: 600px;
+	border: 1px solid lightblue;
+	box-shadow: 5px 5px 5px 5px rgba(0, 0, 255, 0.2);
+	height: 80%;
+	width: 80%;
+}
+
+.back-default{
+	background-image: url(../img/background1.jpg);
+}
+
+.back-animate{
+	background-image: url(../img/background5.jpg);
+}
+
+.flying-down{
+	animation: slidedown 20000s infinite linear;
+}
+
+.flying-up{
+	animation: slideup 20000s infinite linear;
+}
+
+.flying-right{
+	animation: slideright 20000s infinite linear;
+}
+
+.flying-left{
+	animation: slideleft 20000s infinite linear;
 }
 
 .game-instructions{
-	position: relative;
+	text-align: center;
 	color: white;
-	left: 7rem;
-	top: 0px;
+}
+
+.description-mission{
+	box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 1.0);
+	text-align: center;
+	color: white;
+	font-family: 'OCR A Std', monospace;
+	font-size: 25px;
+	text-shadow: 1px 3px rgba(0, 0, 255, 0.7);
 }
 
 .start-button{
-	position: relative;
+	margin-top: 5%;
+	text-align: center;
 	color: white;
-	top: 9rem;
-	left: 15rem;
 	cursor: pointer;
 }
 
 .player-shooter{
-	position: relative;
-	height: 60px;
-	width: 70px;
-	left: 20px;
-	top: 250px;
+	position: absolute;
+	height: 80px;
+	width: 150px;
+	left: 140px;
+	top: 240px;
 }
 
 .laser{
-	position: relative;
-	width: 40px;
-	height: 30px;
+	position: absolute;
+	width: 120px;
+	height: 80px;
 }
 
 .alien{
-	height: 60px;
-	width: 70px;
-	position: relative;
+	height: 100px;
+	width: 150px;
+	position: absolute;
 }
 
 .alien-transition{
@@ -60,6 +112,16 @@ body {
 .dead-alien{
 	height: 60px;
 	width: 70px;
-	position: relative;
+	position: absolute;
 	opacity: 0;
+}
+
+#placar {
+	width: 450px;
+	height: 50px;
+	position: absolute;
+	left: 5px;
+	top: 590px;
+	font-family: 'OCR A Std', monospace;
+	color: white;
 }
