@@ -3,9 +3,9 @@
 	//Banco de dados
 	
 	define('HOSTNAME','fdb15.eohost.com');
-	define('USERNAME','2163708_admin');
-	define('PASSWORD','1324354657687980Site*');
-	define('DATABASE','2163708_admin');
+	define('USERNAME','');
+	define('PASSWORD','');
+	define('DATABASE','');
 	
 	//Url´s
 	
