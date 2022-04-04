@@ -44,8 +44,6 @@ function flyShip(event) {
         indexDir = 0;
         playArea.classList.add(direction[indexDir]);
     } else if(event.key === 'ArrowDown') {
-        event.preventDefault();
-        moveDown();
         playArea.classList.remove(direction[indexDir]);
         indexDir = 1;
         playArea.classList.add(direction[indexDir]);
