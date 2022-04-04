@@ -6,14 +6,15 @@ body {
 	align-items: center;
 	padding: 0;
 	margin: 0;
-	font-family: sans-serif;
+	font-family: Consolas;
 	background: url(../img/background3.webp);
 	background-size: cover;
 }
 
+
 @keyframes slidedown {
-	from { background-position: 0 70000%; }
-	to   { background-position: 0 0; }
+	0%    { background-position: 0 70000%; }
+	100%   { background-position: 0 0; }
 }
 
 @keyframes slideup {
@@ -39,6 +40,19 @@ body {
 	width: 80%;
 }
 
+.img-planet-axius{
+	width: 500px;
+	height: 500px;
+	left: 150;
+	top: 70px;
+}
+
+.img-planet-effect{
+	overflow: hidden;
+	transition: transform .50s ease;
+	transform: scale(20.1);
+}
+
 .back-default{
 	background-image: url(../img/background1.jpg);
 }
@@ -48,19 +62,19 @@ body {
 }
 
 .flying-down{
-	animation: slidedown 20000s infinite linear;
+	animation: slidedown 2500s infinite linear;
 }
 
 .flying-up{
-	animation: slideup 20000s infinite linear;
+	animation: slideup 2500s infinite linear;
 }
 
 .flying-right{
-	animation: slideright 20000s infinite linear;
+	animation: slideright 2500s infinite linear;
 }
 
 .flying-left{
-	animation: slideleft 20000s infinite linear;
+	animation: slideleft 2500s infinite linear;
 }
 
 .game-instructions{
@@ -72,7 +86,6 @@ body {
 	box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 1.0);
 	text-align: center;
 	color: white;
-	font-family: 'OCR A Std', monospace;
 	font-size: 25px;
 	text-shadow: 1px 3px rgba(0, 0, 255, 0.7);
 }
@@ -117,11 +130,11 @@ body {
 }
 
 #placar {
-	width: 450px;
+	width: auto;
 	height: 50px;
 	position: absolute;
 	left: 5px;
 	top: 590px;
-	font-family: 'OCR A Std', monospace;
+	font-family: Consolas;
 	color: white;
 }

@@ -1,6 +1,6 @@
 
 // Link da API JSON
-const BASE_URL = 'https://thatcopy.pw/catapi/rest/';
+const BASE_URL = 'https://francisbftc.github.io/api.json';
 const catBtn = document.getElementById('change-cat');
 const catImg = document.getElementById('cat');
 
@@ -28,8 +28,10 @@ const getCats2 = async () => {
 	const data = await fetch(BASE_URL)
 			.then(res => res.json())
 			.catch(e => console.log(e));
-
-		return data.webpurl;
+	
+		console.log(data.version);
+		console.log(data.features.msg);
+		return data.version;
 };
 
 const loadImg = async () => {
