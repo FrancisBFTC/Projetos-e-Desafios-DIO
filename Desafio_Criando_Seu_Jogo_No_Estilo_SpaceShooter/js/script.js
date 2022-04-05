@@ -1,18 +1,33 @@
-const yourShip = document.querySelector('.player-shooter');
-const playArea = document.querySelector('#main-play-area');
+const yourShip         = document.querySelector('.player-shooter');
+const playArea         = document.querySelector('#main-play-area');
 const instructionsText = document.querySelector('.game-instructions');
-const description = document.querySelector('.description-mission');
-const startButton = document.querySelector('.start-button');
-const placar = document.getElementById('placar');
+const description      = document.querySelector('.description-mission');
+const startButton      = document.querySelector('.start-button');
+const placar           = document.getElementById('placar');
 
-let alienInterval;
-let initMission;
-
-let alienDead = 0;
-let pressJ = false;
+const UP    = 0;
+const DOWN  = 1;
+const RIGHT = 2;
+const LEFT  = 3;
 
 var kmValue, abatidos, missionNum, yearValue, imgObj;
+var introMusic, musicMission, musicFinish;
 
+let alienInterval, initMission;
+
+let pressJ    = false;
+
+let alienDead = 0;
+let years     = 0;
+let distancy  = 0;
+let indexDir  = 0;
+
+const direction = [
+    'flying-down',
+    'flying-up',
+    'flying-right',
+    'flying-left'
+];
 
 const aliensImg = [
     'img/nave-monstro-1.png', 
@@ -35,100 +50,35 @@ let missions = {
     },
 
     mission: 1
-};
+}; 
 
-let years = 0;
-let distancy = 0;
+instructionsText.innerHTML = `${missions.step1.msg}`;
 
-let indexDir = 0;
-let direction = [
-    'flying-down',
-    'flying-up',
-    'flying-right',
-    'flying-left'
-];
-
-var animation;
 
 //movimento e tiro da nave
 function flyShip(event) {
     if(event.key === 'ArrowUp') {
-        playArea.classList.remove(direction[indexDir]);
-        indexDir = 0;
-        playArea.classList.add(direction[indexDir]);
+        changeDirectionSpace(UP);
     } else if(event.key === 'ArrowDown') {
-        //event.preventDefault();
-        playArea.classList.remove(direction[indexDir]);
-        indexDir = 1;
-        playArea.classList.add(direction[indexDir]);
+        changeDirectionSpace(DOWN);
     } else if(event.key === 'ArrowRight'){
-        playArea.classList.remove(direction[indexDir]);
-        indexDir = 2;
-        playArea.classList.add(direction[indexDir]);
+        changeDirectionSpace(RIGHT);
     } else if(event.key === 'ArrowLeft'){
-        playArea.classList.remove(direction[indexDir]);
-        indexDir = 3;
-        playArea.classList.add(direction[indexDir]);
+        changeDirectionSpace(LEFT);
     }else if(event.key === 'w'){
-        //event.preventDefault();
         moveUp();
     }else if(event.key === 's'){
-        //event.preventDefault();
         moveDown();
     }else if(event.key === 'a'){
-        //event.preventDefault();
         moveLeft();
     }else if(event.key === 'd'){
-        //event.preventDefault();
         moveRight();
     }else if(event.key === " ") {
-        //event.preventDefault();
         fireLaser();
     }else{
         if(event.key === 'j'){
-            if(pressJ){
-                let shipTop = parseInt(yourShip.style.top);
-                let shipBottom = shipTop + 80;
-                let shipLeft = parseInt(yourShip.style.left);
-                let shipRight = shipLeft + 150;
-                let planetTop = parseInt(imgObj.style.top);
-                let planetBottom = planetTop + 500;
-                let planetLeft = parseInt(imgObj.style.left);
-                let planetRight = planetLeft + 500;
-
-                if(shipTop >= planetTop && shipBottom <= planetBottom &&
-                   shipLeft >= planetLeft && shipRight <= planetRight){
-
-                    let traveling = setInterval(() => {
-                        let shipWidth = parseInt(yourShip.style.width);
-                        let shipHeight = parseInt(yourShip.style.height);
-
-                        if(shipWidth >= 0 || shipHeight >= 0){
-                            shipWidth--;
-                            shipHeight--;
-                            yourShip.style.width = `${shipWidth}px`;
-                            yourShip.style.height = `${shipHeight}px`;
-                        }else{
-                            playArea.removeChild(imgObj);
-                            yourShip.style.top = "250px";
-                            startButton.style.display = "block";
-                            instructionsText.style.display = "block";
-                            description.style.display = "block";
-                            playArea.classList.remove('back-animate');
-                            playArea.classList.add('back-default');
-                            pressJ = false;
-                            clearInterval(traveling);
-                        }
-
-                    }, 125);
-
-                    imgObj.classList.add('img-planet-effect');
-
-                }else{
-                    alert('Você não está na coordenada do planeta Axius!\n Voe até o planeta com W,A,S ou D');
-                }
-
-            }
+            if(pressJ)
+                flyIntoPlanet();
         }
 
     }
@@ -183,6 +133,14 @@ function moveRight() {
         position += 20;
         yourShip.style.left = `${position}px`;
     }
+}
+
+
+// Altera direção de viagem no espaço
+function changeDirectionSpace(index){
+    playArea.classList.remove(direction[indexDir]);
+    indexDir = index;
+    playArea.classList.add(direction[indexDir]);
 }
 
 //funcionalidade de tiro
@@ -312,6 +270,10 @@ startButton.addEventListener('click', (event) => {
 
 function playGame() {
     if(pressJ === false){
+        clearInterval(loadMusic);
+        introMusic.pause();
+        musicMission.play();
+
         startButton.style.display = 'none';
         instructionsText.style.display = 'none';
         description.style.display = 'none';
@@ -346,8 +308,8 @@ function gameOver() {
     });
 }
 
+// Função que processa a primeira missão do jogo
 function firstMission(){
-        
         yearValue = document.getElementById('year-light');
         abatidos = document.getElementById('abatidos');
         missionNum = document.getElementById('the-mission');
@@ -364,6 +326,9 @@ function firstMission(){
             }
         }else{
             if(alienDead >= 5){
+                musicMission.pause();
+                musicFinish.play();
+
                 yearValue.style.color = 'lightblue';
                 years = 0;
 
@@ -390,6 +355,7 @@ function firstMission(){
         yearValue.innerText = years;
 }
 
+// Função que processa a segunda missão do jogo
 function secondMission() {
     kmValue = document.getElementById('km-value');
     abatidos = document.getElementById('abatidos');
@@ -435,6 +401,7 @@ function secondMission() {
         kmValue.innerText = distancy + "km";
 }
 
+// Função que escolhe qual missão  executar em order 
 function runMission(){
     switch(missions.mission){
         case 1: placar.innerHTML = "<h2> Abatidos: <label id='abatidos'>" + alienDead + "</label> | "
@@ -449,9 +416,10 @@ function runMission(){
                 break;
     }
 }
-
-function finishGame(){
-    window.removeEventListener('keydown', flyShip);
+ 
+// Função para finalizar jogo tanto no gameover quanto nas missões
+function finishGame(){ 
+    window.removeEventListener('keydown', flyShip); 
     clearInterval(initMission);
     initMission = null;
     clearInterval(alienInterval);
@@ -464,6 +432,8 @@ function finishGame(){
     
 }
 
+// Inserir objeto de propósito da missão seria criar um planeta Axius para a missão 1
+// Ou criar o objeto valioso da missão 2
 function insertGoalObject(path){
     imgObj = document.createElement('img');
     imgObj.src = path;
@@ -473,4 +443,65 @@ function insertGoalObject(path){
     playArea.appendChild(imgObj);
 }
 
-instructionsText.innerHTML = `${missions.step1.msg}`;
+// Faz o planeta Axius dar zoom se pressionar J, como se tivesse voando
+// até lá
+function flyIntoPlanet(){
+    let shipTop = parseInt(yourShip.style.top);
+    let shipBottom = shipTop + 80;
+    let shipLeft = parseInt(yourShip.style.left);
+    let shipRight = shipLeft + 150;
+    let planetTop = parseInt(imgObj.style.top);
+    let planetBottom = planetTop + 500;
+    let planetLeft = parseInt(imgObj.style.left);
+    let planetRight = planetLeft + 500;
+
+    if(shipTop >= planetTop && shipBottom <= planetBottom &&
+        shipLeft >= planetLeft && shipRight <= planetRight){
+
+        let traveling = setInterval(() => {
+            let shipWidth = parseInt(yourShip.style.width);
+            let shipHeight = parseInt(yourShip.style.height);
+
+            if(shipWidth >= 0 || shipHeight >= 0){
+                shipWidth--;
+                shipHeight--;
+                yourShip.style.width = `${shipWidth}px`;
+                yourShip.style.height = `${shipHeight}px`;
+            }else{
+                playArea.removeChild(imgObj);
+                yourShip.style.top = "250px";
+                startButton.style.display = "block";
+                instructionsText.style.display = "block";
+                description.style.display = "block";
+                playArea.classList.remove('back-animate');
+                playArea.classList.add('back-default');
+                pressJ = false;
+                clearInterval(traveling);
+                musicFinish.pause();
+                introMusic.play();
+            }
+
+        }, 125);
+
+        imgObj.classList.add('img-planet-effect');
+
+    }else{
+        alert('Você não está na coordenada do planeta Axius!\nVoe até o planeta com W, A, S ou D');
+    }
+}
+
+
+let initMusic = () => {
+    introMusic = document.getElementById('intro-music-menu');
+    musicMission = document.getElementById('music-mission');
+    musicFinish = document.getElementById('music-mission-finish');
+
+    introMusic.addEventListener("ended", function(){ 
+        introMusic.currentTime = 0; 
+        introMusic.play(); 
+    }, false);
+
+    introMusic.play();
+}
+
+let loadMusic = setInterval(initMusic, 20);
