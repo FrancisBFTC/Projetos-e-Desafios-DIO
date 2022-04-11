@@ -11,6 +11,19 @@
 		<img class="player-shooter" src="img/nave.webp" alt="Nave do Herói">
 		<div id="placar"></div>
 
+		<div class="info-game">
+			<h1>Space Shooter</h1>
+			<h2>Proteja a terra!</h2>
+			<p>
+				Saudações soldado espacial 327! A mandado da chefe de missões de proteção a terra sob lei Nº 1001100, você foi convocado(a) para encontrar um planeta alienígena e impedir que a nave-mãe seja lançada a terra! A nave-mãe foi programada por seres ultra-inteligentes contra desativação manual para viajar até a terra a fim de se auto-explodir no nosso planeta e tudo que você deve fazer é desativá-la mas pra isso será necessário enfrentar obstáculos pelo caminho. Não deixe que os alienígenas ultrapassem a fronteira, portanto você será responsável pelo sucesso de 3 missões garantindo o futuro da humanidade e se morrestes como um herói, será lembrado por toda a eternidade, contamos com você soldado 327!
+			</p>
+			<h2>Como jogar?</h2>
+			<p>
+				Utilize as teclas <strong>W, S, D e A</strong> para se movimentar;
+				As teclas direcionais <strong>Up, Down, Left e Right</strong> para mudar a direção de viagem/movimento; A <strong> Barra de espaço </strong> é seu ataque, equipados com munições a laser e as teclas especiais <strong> J </strong> para entrar no planeta e na nave, <strong>CTRL</strong> (A partir da missão 3), para posicionamento diagonal do personagem;
+			</p>
+			<button onclick="hideInfoGame(document.querySelector('.info-game'))">JOGAR</button>
+		</div>
 		<div class="description-mission">
 			<h4 class="game-instructions">
 
@@ -20,9 +33,20 @@
 				Direções no Espaço: Up, Down, Left, Right<br>
 				Ataques: Barra de Espaço;
 			</h5>
+			<div class="start-button">
+				<h1>START</h1>
+			</div>
 		</div>
-		<div class="start-button">
-			<h1>START</h1>
+
+		<div class="panel">
+			<div class="buttons-panel">
+				<img src="img/computer-panel/blue-button.png" class="img-buttons" onclick="detectImg(this)"/>
+				<img src="img/computer-panel/green-button.png" class="img-buttons" onclick="detectImg(this)"/>
+				<img src="img/computer-panel/lightblue-button.png" class="img-buttons" onclick="detectImg(this)"/>
+				<img src="img/computer-panel/orange-button.png" class="img-buttons" onclick="detectImg(this)"/>
+				<img src="img/computer-panel/pink-button.png" class="img-buttons" onclick="detectImg(this)"/>
+				<img src="img/computer-panel/purple-button.png" class="img-buttons" onclick="detectImg(this)"/>
+			</div>
 		</div>
 	</div>
 
@@ -30,6 +54,17 @@
 	<audio src="sounds/music-mission.mp3" preload="auto" id="music-mission"></audio>
 	<audio src="sounds/music-mission-finish.mp3" preload="auto" id="music-mission-finish"></audio>
 
+	<audio src="sounds/explosion-ship-sound.mp3" preload="auto" id="explosion-ship-sound"></audio>
+	<audio src="sounds/explosion-alien-sound.mp3" preload="auto" id="explosion-alien-sound"></audio>
+	<audio src="sounds/laser-sound.mp3" preload="auto" id="laser-sound"></audio>
+	<audio src="sounds/alien-passing-sound.mp3" preload="auto" id="alien-passing-sound"></audio>
+
+	<audio src="sounds/ovni-sound.mp3" preload="auto" id="ovni-sound"></audio>
+	<audio src="sounds/monsters-sound.mp3" preload="auto" id="monsters-sound"></audio>
+	<audio src="sounds/monsters-attach.mp3" preload="auto" id="monsters-attach"></audio>
+	<audio src="sounds/mothership-alarm.mp3" preload="auto" id="mothership-alarm"></audio>
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
