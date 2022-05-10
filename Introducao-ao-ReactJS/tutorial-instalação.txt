@@ -1,0 +1,40 @@
+Instalação do React em um projeto:
+----------------------------------------------------------------
+npm install react@17.0.1 react-dom@17.0.1 react-scripts@4.0.0
+
+Obs.: É gerado uma pasta "node_modules".
+Objetivo: Criação de componentes com html e js juntos.
+----------------------------------------------------------------
+
+Instalação do webpack em um projeto:
+----------------------------------------------------------------
+npm i -D webpack webpack-cli acorn@8.0.0
+
+Obs.: Deve configurar um arquivo chamado "webpack.config.js";
+      pra executar, basta digitar "npm run build".
+Objetivo: Empacotar módulos JS e gerar um arquivo minificado para 
+	  produção ou desenvolvimento.
+----------------------------------------------------------------
+
+Instalação do babel em um projeto: 
+----------------------------------------------------------------
+npm i @babel/core babel-loader @babel/preset-env @babel/preset-react --save-dev
+
+Objetivo: Transpilar códigos JS ES6 ou acima para browsers que não
+	  suportam a versão do ECMAScript, Ex.: ES5 (Compatibilidade)
+----------------------------------------------------------------
+
+Instalação de Plugin HTML:
+----------------------------------------------------------------
+npm i -D html-webpack-plugin html-loader
+
+----------------------------------------------------------------
+
+Instalação de Dev Server (Servidor em modo de desenvolvimento):
+----------------------------------------------------------------
+npm i webpack-dev-server
+
+"scripts": {
+  "start:dev": "webpack-dev-server"
+}
+----------------------------------------------------------------
