@@ -1,4 +1,4 @@
-# Desafios de Projetos de Eletrônico do Formação IoT
+# Desafios de Projetos de Eletrônica do Formação IoT
 
 ## Projeto 1 de Eletrônica
 
