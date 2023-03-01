@@ -10,4 +10,4 @@ Neste projeto, simulando uma estufa de hortaliças, deve ser desenvolvido no sim
 
 Todo o processo descrito deve ser programado em linguagem C na placa de projetos Arduino.
 
-[acesse aqui: https://www.tinkercad.com/things/8icWvHdYeDz-stunning-amur/editel?sharecode=2mzNS_dzvcI6HvUYqIm1Jlb3NBdkIIe6toyX4kO6kHE](Clique aqui para acessar o projeto!)
+[https://www.tinkercad.com/things/8icWvHdYeDz-stunning-amur/editel?sharecode=2mzNS_dzvcI6HvUYqIm1Jlb3NBdkIIe6toyX4kO6kHE](Clique aqui para acessar o projeto!)
