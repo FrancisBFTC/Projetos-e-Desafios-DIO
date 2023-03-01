@@ -9,3 +9,5 @@ Neste projeto, simulando uma estufa de hortaliças, deve ser desenvolvido no sim
   * Caso a temperatura ultrapasse os 50 °C, um LED vermelho e uma buzina devem acionar avisando uma situação de emergência
 
 Todo o processo descrito deve ser programado em linguagem C na placa de projetos Arduino.
+
+[acesse aqui: https://www.tinkercad.com/things/8icWvHdYeDz-stunning-amur/editel?sharecode=2mzNS_dzvcI6HvUYqIm1Jlb3NBdkIIe6toyX4kO6kHE](Clique aqui para acessar o projeto!)
