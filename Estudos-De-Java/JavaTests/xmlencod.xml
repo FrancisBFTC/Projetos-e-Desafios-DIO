@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.0" class="java.beans.XMLDecoder">
+    <object class="javax.swing.JFrame">
+        <void property="name">
+            <string>frame1</string>
+        </void>
+        <void property="bounds">
+            <object class="java.awt.Rectangle">
+                <int>0</int>
+                <int>0</int>
+                <int>500</int>
+                <int>500</int>
+            </object>
+        </void>
+        <void property="contentPane">
+            <void method="add">
+                <object class="javax.swing.JButton">
+                    <void property="label">
+                        <string>Hello World! This is a JFrame Window</string>
+                    </void>
+                </object>
+            </void>
+        </void>
+        <void property="visible">
+            <boolean>true</boolean>
+        </void>
+    </object>
+</java>

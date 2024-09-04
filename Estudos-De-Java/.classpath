@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="JavaTests/src"/>
+	<classpathentry kind="src" path="my-project-vscode/my-project-vscode/src"/>
+	<classpathentry kind="lib" path="my-project-vscode/my-project-vscode/lib/javax.servlet.jar"/>
+	<classpathentry kind="output" path="JavaTests/out/production/JavaTests"/>
+</classpath>
