@@ -7,7 +7,7 @@ public class LoginControl {
     public static int Session = 0;
 
     public static void loginInit(){
-        login = new Login("Admin", "1234");
+        login = new Login("admin", "1234");
     }
 
     public static Login getLogin(){

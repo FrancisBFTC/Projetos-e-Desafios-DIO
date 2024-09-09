@@ -57,7 +57,7 @@ public class EstoqueUI {
 
         frameEstoque.setSize(500, 300);
         frameEstoque.setLocationRelativeTo(null);
-        frameEstoque.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameEstoque.setResizable(false);
 
         lblName.setBounds(50, 50, 100, 20);
         fieldName.setBounds(120, 50, 300, 20);
