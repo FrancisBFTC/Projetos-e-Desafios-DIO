@@ -6,11 +6,15 @@ import javax.swing.*;
 
 public class EstoqueControl {
 
-    public static Estoque[] estoque;
+    private static Estoque[] estoque;
     private static int index = 0;
 
-    public static void estoqueInit(){
-        estoque = new Estoque[10];
+    // Implementando o padrão Singleton (Design Pattern)
+    public static Estoque[] estoqueInit(){
+        if(getEstoque() == null)
+            estoque = new Estoque[10];
+
+        return estoque;
     }
 
     public static Estoque[] getEstoque() {

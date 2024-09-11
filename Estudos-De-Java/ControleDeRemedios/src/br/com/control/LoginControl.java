@@ -8,6 +8,7 @@ public class LoginControl {
 
     public static void loginInit(){
         login = new Login("admin", "1234");
+        Session = 1;
     }
 
     public static Login getLogin(){

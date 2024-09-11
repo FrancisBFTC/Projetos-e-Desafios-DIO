@@ -1,6 +1,7 @@
 package br.com.boundary.UI;
 
 import br.com.control.PedidosControl;
+import br.com.entity.Pedidos;
 
 import javax.swing.*;
 import java.awt.*;
@@ -28,10 +29,11 @@ public class PedidosUI {
     private JTextField txtQuantidade;
     private JTextField txtValor;
     private JButton btnPedido;
+    private Pedidos[] pedidos;
 
     public PedidosUI(String title){
 
-        PedidosControl.pedidosInit();
+        pedidos = PedidosControl.pedidosInit();
 
         framePedidos = new JFrame(title);
         panelPedidos = new JPanel();

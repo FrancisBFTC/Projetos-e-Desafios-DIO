@@ -5,9 +5,9 @@ import java.util.Date;
 
 public class Pedidos {
     private int idPedido;
-    private int idPaciente;
-    private Date dataPedido;
-    private Time horaPedido;
+    private String nomePaciente;
+    private String dataPedido;
+    private String horaPedido;
     private String produtoPedido;
     private String descricaoPedido;
     private int quantidadePedido;
@@ -15,7 +15,7 @@ public class Pedidos {
 
     public Pedidos() {
         this.idPedido = 0;
-        this.idPaciente = 0;
+        this.nomePaciente = "";
         this.dataPedido = null;
         this.horaPedido = null;
         this.produtoPedido = "";
@@ -24,10 +24,10 @@ public class Pedidos {
         this.valorPedido = 0;
     }
 
-    public Pedidos(int idPedido, int idPaciente, Date dataPedido, Time horaPedido, String produtoPedido,
+    public Pedidos(int idPedido, String nomePaciente, String dataPedido, String horaPedido, String produtoPedido,
                    String descricaoPedido, int quantidadePedido, double valorPedido){
         this.idPedido = idPedido;
-        this.idPaciente = idPaciente;
+        this.nomePaciente = nomePaciente;
         this.dataPedido = dataPedido;
         this.horaPedido = horaPedido;
         this.produtoPedido = produtoPedido;
@@ -44,27 +44,27 @@ public class Pedidos {
         this.idPedido = idPedido;
     }
 
-    public int getIdPaciente() {
-        return idPaciente;
+    public String getNomePaciente() {
+        return nomePaciente;
     }
 
-    public void setIdPaciente(int idPaciente) {
-        this.idPaciente = idPaciente;
+    public void setNomePaciente(String nomePaciente) {
+        this.nomePaciente = nomePaciente;
     }
 
-    public Date getDataPedido() {
+    public String getDataPedido() {
         return dataPedido;
     }
 
-    public void setDataPedido(Date dataPedido) {
+    public void setDataPedido(String dataPedido) {
         this.dataPedido = dataPedido;
     }
 
-    public Time getHoraPedido() {
+    public String getHoraPedido() {
         return horaPedido;
     }
 
-    public void setHoraPedido(Time horaPedido) {
+    public void setHoraPedido(String horaPedido) {
         this.horaPedido = horaPedido;
     }
 

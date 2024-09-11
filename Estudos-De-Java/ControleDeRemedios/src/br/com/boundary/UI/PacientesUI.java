@@ -1,6 +1,7 @@
 package br.com.boundary.UI;
 
 import br.com.control.PacientesControl;
+import br.com.entity.Pacientes;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -28,10 +29,11 @@ public class PacientesUI {
     private JTextField txtTelefone;
     private JTextField txtEndereco;
     private JButton btnPaciente;
+    private Pacientes[] paciente;
 
     public PacientesUI(String title){
 
-        PacientesControl.pacientesInit();
+        paciente = PacientesControl.pacientesInit();
 
         framePacientes = new JFrame(title);
         panelPacientes = new JPanel();

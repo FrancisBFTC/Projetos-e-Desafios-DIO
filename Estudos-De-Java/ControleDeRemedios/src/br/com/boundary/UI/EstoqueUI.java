@@ -1,6 +1,7 @@
 package br.com.boundary.UI;
 
 import br.com.control.EstoqueControl;
+import br.com.entity.Estoque;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -20,11 +21,11 @@ public class EstoqueUI {
     private JLabel lblQuant;
     private JLabel lblPreco;
     private JButton cadastrarButton;
-    private JButton listarButton;
+    private Estoque[] estoque;
 
     public EstoqueUI(String windowTitle) {
 
-        EstoqueControl.estoqueInit();
+        estoque = EstoqueControl.estoqueInit();
 
         frameEstoque = new JFrame(windowTitle);
         panelEstoque = new JPanel();
@@ -39,8 +40,6 @@ public class EstoqueUI {
         lblPreco = new JLabel("Preço:");
 
         cadastrarButton = new JButton();
-        listarButton = new JButton();
-
 
         frameEstoque.add(panelEstoque);
         panelEstoque.setLayout(null);
@@ -53,7 +52,6 @@ public class EstoqueUI {
         panelEstoque.add(lblQuant);
         panelEstoque.add(lblPreco);
         panelEstoque.add(cadastrarButton);
-        panelEstoque.add(listarButton);
 
         frameEstoque.setSize(500, 300);
         frameEstoque.setLocationRelativeTo(null);
@@ -126,40 +124,7 @@ public class EstoqueUI {
             }
         });
 
-        listarButton.setText("Listar");
-        listarButton.setBounds(160, 170, 120, 20);
-        listarButton.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-                EstoqueControl.listarEstoqueConsole();
-                double orcamento = EstoqueControl.getPrecoTotalEstoques();
-                System.out.println("O orçamento de remédios deu R$" + orcamento + " reais");
-
-                janelaListarEstoque();
-            }
-        });
-
         frameEstoque.setVisible(true);
     }
 
-    public void janelaListarEstoque(){
-        JFrame listarFrame = new JFrame();
-        JPanel listarPanel = new JPanel();
-        listarFrame.setSize(500, 300);
-        listarPanel.setSize(500, 300);
-        listarPanel.setLayout(null);
-        listarFrame.setLocationRelativeTo(null);
-        listarFrame.add(listarPanel);
-
-        JLabel[] labelsNome = new JLabel[EstoqueControl.getEstoque().length];
-        JLabel[] labelsDesc = new JLabel[EstoqueControl.getEstoque().length];
-        JLabel[] labelsQuant = new JLabel[EstoqueControl.getEstoque().length];
-        JLabel[] labelsPreco = new JLabel[EstoqueControl.getEstoque().length];
-
-        int pos_y = 20;
-
-        EstoqueControl.listarEstoqueGUI(listarPanel, labelsNome, labelsDesc, labelsQuant, labelsPreco, pos_y);
-
-        listarFrame.setVisible(true);
-    }
 }

@@ -1,0 +1,1 @@
+https://apidadosabertos.saude.gov.br/v1/#/CNES/get_cnes_tipounidades__codigo_tipo_unidade_
