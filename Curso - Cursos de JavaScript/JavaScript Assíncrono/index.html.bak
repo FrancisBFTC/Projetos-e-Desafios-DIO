@@ -10,7 +10,7 @@
 	<body>
 		<main>
 			<h1>Just... cats!</h1>
-			<h1 id="cat" ></h1><br />
+			<img id="cat" /><br />
 			<button id="change-cat">Change cat</button>
 		</main>
 		<script src="assets/js/atividade-pratica.js"></script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/card.css">
+    <script src="src/components/Card.js" defer></script>
+    <script src="src/components/CardNews.js" defer></script>
+    <script src="src/components/TituloDinamico.js" defer></script>
+    <title>Components</title>
+</head>
+<body>
+   <my-tag></my-tag>
+   <titulo-dinamico titulo="Noticia quente"></titulo-dinamico>
+   <div class="container">
+        <card-news 
+            author="Wenderson"
+            link="www.google.com.br"
+            title="Darth Vader Contrata"
+            description="Contrata-se desenvolvedores que saibam trabalhar com componentes"
+            photo="assets/darth-vader.jpg">
+        </card-news>
+
+        <card-news
+            title="Yoda convence republica a utilizar componentes"
+            link="www.google.com.br/yoda"
+            description="Yoda se pronuncia e choca a republica!">
+        </card-news>
+   </div>
+</body>
+</html>
